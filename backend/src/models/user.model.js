@@ -19,9 +19,13 @@ const userSchema = new mongoose.Schema(
     profilePic:{
         type:String,
         default: "",
+    },
+    subjects: {
+        type: [String],
+        default: []
     }
 },
-{timestrap:true}
+{timestamps:true}
 );
 
 const User = mongoose.model("User",userSchema);
